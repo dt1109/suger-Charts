@@ -1,0 +1,21 @@
+{
+    "title": "模块管理",
+    "icon": "&#xe630;",
+    "href": "",
+    "spread": false,
+    "children": [
+        {
+            "title": "404页面",
+            "icon": "&#xe61c;",
+            "href": "page/404.html",
+            "spread": false
+        },
+        {
+            "title": "登录",
+            "icon": "&#xe609;",
+            "href": "page/news/newsList.html",
+            "spread": false
+            
+        }
+    ]
+}

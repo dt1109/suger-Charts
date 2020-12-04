@@ -1,0 +1,69 @@
+body,html{
+    height: 100%;
+}
+
+body{
+   font-family: arial,helvetica,verdana,"Microsoft Yahei","微软雅黑",sans-serif;
+    font-size: 16px;
+    color: #333;
+    background: #ffffff;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,dl,dt,dd,table,tr,td,input{
+    margin:0;
+    padding: 0;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+    outline: none;
+    /*点击时出现的蓝色边框*/
+}
+
+ul,li{
+    list-style: none;
+}
+
+em,i{
+    font-style: normal;
+}
+
+img{
+    display: block;
+    border: none;
+}
+input{
+    outline: none;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.clearfix:after{
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.w1000{
+    width: 1000px;
+    margin:0 auto;
+}

@@ -1,0 +1,119 @@
+/*表格样式重写*/
+.layui-table-header,.layui-table thead tr{
+	background-color: transparent!important;
+	background: -webkit-linear-gradient(#ffffff, #fff8ef); 
+  	background: -o-linear-gradient(#ffffff, #fff8ef); 
+  	background: -moz-linear-gradient(#ffffff, #fff8ef); 
+  	background: linear-gradient(#ffffff, #fff8ef); 
+}
+.layui-table-cell{
+	height: 24px;
+	line-height: 24px;
+}
+/*静态表格*/
+.layui-table tr th{
+	background: -webkit-linear-gradient(#ffffff, #fff8ef);
+    background: -o-linear-gradient(#ffffff, #fff8ef);
+    background: -moz-linear-gradient(#ffffff, #fff8ef);
+    background: linear-gradient(#ffffff, #fff8ef);
+    font-weight: bold;
+}
+/*分页*/
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+	background: #DDDDDD;
+}
+.layui-laypage .layui-laypage-curr em{
+	color: #333;
+}
+/*简洁风格tab标签页样式*/
+.layui-tab-brief{
+	margin:0;
+}
+.layui-tab-brief .layui-tab-title{
+	margin-left: 0;
+	margin-right: auto;
+	height: 40px;
+	width: 99%;
+	color: #333333;
+	padding-left: 1%;
+}
+.layui-tab-brief>.layui-tab-title .layui-this{
+	color: rgba(95,116,252,1);
+	font-weight: bold;
+}
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+ .layui-tab-brief>.layui-tab-title .layui-this:after{
+	border-bottom: 2px solid rgba(95,116,252,1);
+}
+.layui-tab-title .layui-this:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 41px;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: #fff;
+    border-radius: 2px 2px 0 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+/*select下拉框*/
+.layui-form-select .layui-input{
+	height: 30px;
+}
+.layui-form-label{
+	padding: 5px 10px;
+}
+.layui-form-select dl{
+	top: 36px;
+}
+/*公共按钮样式*/
+.commonBtn{
+	height: 28px;
+	line-height: 28px;
+	border: 0;
+	border-radius: 2px;
+	padding: 0 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	outline: 0;
+	transition: opacity .5s;
+}
+.commonBtn:hover{
+	opacity: 0.7;
+	transition: opacity .5s;
+}
+/*查询*/
+.searchBtn{
+	padding: 0 15px;
+	background: #45ad6a;
+	color: #FFFFFF;
+}
+/*清空*/
+.cleanBtn{
+	padding: 0 15px;
+	background: #ffa915;
+	color: #FFFFFF;
+}
+/*导出*/
+.exportBtn{
+	padding: 0 15px;
+	background: #10d2b0;
+	color: #FFFFFF;
+}
+/*日期时间选择框*/
+.searchBox .dataTime{
+	background: url(../../img/menu/rq.png) no-repeat 95% center;
+}
+
+/*单元格操作*/
+.opreationBtn{
+	cursor: pointer;
+}
+/*头部二级弹框*/
+.layui-layer-title .layui-this{
+	color: #f9714d;
+}

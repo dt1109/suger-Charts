@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../plugin/layui/css/layui.css">
+    <link rel="stylesheet" href="css/com.css">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="css/new.css">
+</head>
+<body>
+    <div class="cg-all">
+    <div class="cg-left">
+        <div class="cl-title">
+            <span class="activespan imgtab"><img src="img/cgsl/kzmb.png" alt="" rel='img/cgsl/kzmb2.png' del='img/cgsl/kzmb.png'>控制面板</span>
+            <span class="imgtab"><img src="img/cgsl/cgg1.png" alt="" rel='img/cgsl/cgg1.png' del='img/cgsl/cgg.png'>我的成果图</span>
+            <img src="img/cgsl/shouleft.png" alt="">
+        </div>
+        <div class="cl-section">
+            <div class="cl-tab selected">
+                    <div class="gongju">
+                            <div class="gongju-title">
+                                    <div id="my-tabs">
+                                            <ul class="tabs">
+                                              <li class="active"><a data-toggle="tab" href="#content1">基础</a></li>
+                                              <li><a data-toggle="tab" href="#content2">数据</a></li>
+                                              <li><a data-toggle="tab" href="#content3">高级</a></li>
+                                              <li><a data-toggle="tab" href="#content4">下钻</a></li>
+                                              <li><a data-toggle="tab" href="#content5">联动</a></li>
+                                            </ul>
+                                            <div class="container">
+                                              <div id="content1" class="active">
+                                               <div class="p-div"><span>图表名称: </span><br><input type="text" value="第二次全国污染源普查统计" id="mc"></div>
+                                               <div class="p-div"><span>图表简介: </span><br><input type="text" value="暂无简介"></div>
+                                               <div class="p-div"><span>图表宽度: </span><br>
+                                                <input id="sliderInput" class="sliderInput" type="text" min="0" max="100" value="55">
+                                               </div>
+                                               <div class="p-div">
+                                                   <span>图表高度: </span><br><input type="number" value="70">
+                                               </div>
+                                              </div>
+                                              <div id="content2">
+                                                   <div class="cn2-title">
+                                                    数据绑定:
+                                                   </div>
+                                                   <div class="cn2-xztj">
+                                                       <div class="sptabi">
+                                                       <span class="imgtab1"><img src="img/cgsl/xzyuan.png" rel="img/cgsl/wxzyuan.png" del="img/cgsl/xzyuan.png" alt="">数据源</span>
+                                                       <span style="margin-left: 15px;" class="imgtab1"><img src="img/cgsl/wxzyuan.png" rel="img/cgsl/wxzyuan.png" del="img/cgsl/xzyuan.png" alt="">我的条件</span>
+                                                        </div>
+                                                       <div class="shujuyuantaball">
+                                                       <div class="cl-tab2 selected">
+                                                       <div class="sjbddiv bd1layer">
+                                                            点击绑定+
+                                                        </div>
+                                                        <div class="x-zhou">
+                                                            <div class="xz-left">
+                                                                X轴数据:<br>
+                                                                <select name="" id="">
+                                                                    <option value="">日活量</option>
+                                                                    <option value="">月活量</option>
+                                                                    <option value="">总量</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="xz-right">
+                                                                    单位:<br>
+                                                                    <input type="text" class="danwei666" value="万吨">
+                                                            </div>
+                                                        </div>
+                                                        <div class="x-zhou">
+                                                                <div class="xz-left">
+                                                                    Y轴数据:<br>
+                                                                    <select name="" id="">
+                                                                            <option value="">污染源</option>
+                                                                            <option value="">污废厂数量</option>
+                                                                            <option value="">占比</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="xz-right">
+                                                                        单位:<br>
+                                                                        <input type="text" class="danwei666" value="万">
+                                                                </div>
+                                                            </div>
+                                                        <div class="qkqrbtn">
+                                                            <button class="qingkong">清空</button>
+                                                            <button class="queren">确认</button>
+                                                        </div>
+                                                        </div>
+                                                        <div class="cl-tab2 noselected">
+                                                            <div class="sjbddiv bd2layer">
+                                                                点击绑定+
+                                                            </div>
+                                                            <div class="x-zhou">
+                                                                <div class="xz-left">
+                                                                    X轴数据:<br>
+                                                                    <select name="" id="">
+                                                                        <option value="">日活量</option>
+                                                                        <option value="">月活量</option>
+                                                                        <option value="">总量</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="xz-right">
+                                                                        单位:<br>
+                                                                        <input type="text" class="danwei666" value="万吨">
+                                                                </div>
+                                                            </div>
+                                                            <div class="x-zhou">
+                                                                    <div class="xz-left">
+                                                                        Y轴数据:<br>
+                                                                        <select name="" id="">
+                                                                                <option value="">污染源</option>
+                                                                                <option value="">污废厂数量</option>
+                                                                                <option value="">占比</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="xz-right">
+                                                                            单位:<br>
+                                                                            <input type="text" class="danwei666" value="万">
+                                                                    </div>
+                                                                </div>
+                                                            <div class="qkqrbtn">
+                                                                <button class="qingkong">清空</button>
+                                                                <button class="queren">确认</button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                   </div>
+                                              </div>
+                                              <div id="content3">
+                                                  <h3 style="font-weight: bold;padding-left:5px">样式设置:</h3>
+                                                    <div class="p-div1"><span>线条平滑<img src="img/guan.png" alt=""></span></div>
+                                                    <div class="p-div1"><span>面积图<img src="img/guan.png" alt=""></span></div>
+                                                    <div class="p-div1"><span>更改X轴<img src="img/guan.png" alt=""></span></div>
+                                                    <div class="p-div1"><span>更改Y轴<img src="img/guan.png" alt=""></span></div>
+                                                    <div class="p-div1"><span>网格线<img src="img/guan.png" alt=""></span></div>
+                                                    <div class="p-div1"><span>缩放<img src="img/guan.png" alt=""></span></div>
+                                            </div>
+                                            <div id="content4">
+                                                    下钻功能暂未开放
+                                              </div>
+                                              <div id="content5">
+                                                    联动功能暂未开放
+                                              </div>
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="cl-tab noselected">
+                <div class="search-title">
+                    <input type="text" class="search-inp" placeholder="请输入关键字"><img src="img/cgsl/souduos.png" alt="" class="seaimg">
+                </div>
+                <div class="divcard">
+                    <span class="cjwdcgt">创建我的成果图</span><br>
+                    <span class="kzdy">可自定义图表，并保存到我的成果图</span>
+                    <img src="img/cgsl/tianjia.png" alt="" class="tianjiapng">
+                </div>
+                <div class="divcard">
+                        <p><span class="cjwdcgt">我的成果图1</span> <span style="float: right;margin-right:30px">2019-8-01</span></p><br>
+                        <div><span class="qygmdx">企业规模:大型</span><span class="qygmdx">排污许可:已发放</span></div>
+                        <img src="img/cgsl/bjsc.png" alt="" class="bjscimg">
+                </div>
+                <div class="divcard">
+                        <p><span class="cjwdcgt">我的成果图2</span> <span style="float: right;margin-right:30px">2019-8-01</span></p><br>
+                        <div><span class="qygmdx">企业规模:大型</span><span class="qygmdx">排污许可:已发放</span></div>
+                        <img src="img/cgsl/bjsc.png" alt="" class="bjscimg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cg-right">
+            <header class="e-header">
+                    <span style="margin-left: 20px;" class="e-tab-text">
+                        当前图表效果预览
+                    </span>
+                    <div class="e-tab">
+                        <ul>
+                            <li class="tubiao">
+                                <div class='tubiao1 imgtab2'><img src="img/cgsl/tubiao.png" rel="img/cgsl/tubiao1.png" del="img/cgsl/tubiao.png" alt=""></div>
+                                <div class="page1">
+                                    <div class="list1" id="zhexiantu">
+                                        <div><img src="img/a50.png" alt=""></div>
+                                        <p>折线图<p>
+                                    </div>
+                                    <div class="list1" id="zhuzhuangtu">
+                                        <div><img src="img/tb/tb7.png" alt=""></div>
+                                        <p>柱状图</p>
+                                    </div>
+                                    <div class="list1" id="bingzhaungtu">
+                                        <div><img src="img/a64.png" alt=""></div>
+                                        饼状图
+                                    </div>
+                                    <div class="list1" id="quxiantu">
+                                            <div><img src="img/tb/tb1.png" alt=""></div>
+                                        曲线图
+                                    </div>
+                                    <div class="list1" id="zhongguomap">
+                                        <div><img src="img/a65.png" alt=""></div>
+                                       中国地图
+                                    </div>
+                                    <div class="list1" id="zhongguomap">
+                                            <div><img src="img/a69.png" alt=""></div>
+                                           环饼图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/a70.png" alt=""></div>
+                                               内圆饼图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb11.png" alt=""></div>
+                                               正负柱图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb12.png" alt=""></div>
+                                               双向对比柱图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb13.png" alt=""></div>
+                                               渐变色柱图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb14.png" alt=""></div>
+                                               山峰柱图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb15.png" alt=""></div>
+                                               象形柱状图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb16.png" alt=""></div>
+                                               圆环柱图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb17.png" alt=""></div>
+                                               异色饼图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb18.png" alt=""></div>
+                                               环型饼图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb19.png" alt=""></div>
+                                               玫瑰饼图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb5.png" alt=""></div>
+                                               阶梯线图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb6.png" alt=""></div>
+                                               线柱混搭图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/a63.png" alt=""></div>
+                                               连续线图
+                                        </div>
+                                        <div class="list1" id="zhongguomap">
+                                                <div><img src="img/tb/tb8.png" alt=""></div>
+                                               横向柱图
+                                        </div>
+                                        
+                                </div>
+                            </li>
+                            <li class="qita">
+                                <div class='tubiao1 imgtab2'><img src="img/cgsl/dtt1.png" rel="img/cgsl/dtt1.png" del="img/cgsl/dtt.png" alt=""></div>
+                                <div class="page2">
+                                    <div class="list1">
+                                            <div><img src="img/a71.png" alt=""></div>
+                                        散点图
+                                    </div>
+                                    <div class="list1">
+                                            <div><img src="img/a72.png" alt=""></div>
+                                        K线图
+                                    </div>
+                                    <div class="list1">
+                                            <div><img src="img/a73.png" alt=""></div>
+                                        三维图
+                                    </div>
+                                    <div class="list1">
+                                            <div><img src="img/a75.png" alt=""></div>
+                                        倒影图
+                                    </div>
+                                    <div class="list1">
+                                            <div><img src="img/a76.png" alt=""></div>
+                                        平面图
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map1.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map2.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map3.png" alt=""></div>
+                                       
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map4.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map5.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map6.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map1.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map7.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map8.png" alt=""></div>
+                                        
+                                    </div>
+                                    <div class="list1 list2">
+                                            <div><img src="img/map/map9.png" alt=""></div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="qita1">
+                                    <div class='tubiao1 imgtab2'><img src="img/cgsl/bgg1.png" rel="img/cgsl/bgg1.png" del="img/cgsl/bgg.png" alt=""></div>
+                                    <div class="page3">
+                                        <div class="list1">
+                                                <div><img src="img/a71.png" alt=""></div>
+                                            散点图
+                                        </div>
+                                        <div class="list1">
+                                                <div><img src="img/a72.png" alt=""></div>
+                                            K线图
+                                        </div>
+                                        <div class="list1">
+                                                <div><img src="img/a73.png" alt=""></div>
+                                            三维图
+                                        </div>
+                                        <div class="list1">
+                                                <div><img src="img/a75.png" alt=""></div>
+                                            倒影图
+                                        </div>
+                                        <div class="list1">
+                                                <div><img src="img/a76.png" alt=""></div>
+                                            平面图
+                                        </div>
+                                       
+                                    </div>
+                                </li>
+                                <li class="qita2">
+                                        <div class='tubiao1 imgtab2'><img src="img/cgsl/wenzi1.png" rel="img/cgsl/wenzi1.png" del="img/cgsl/wenzi.png" alt=""></div>
+                                        <div class="page4">
+                                            <div class="list1">
+                                                    <div><img src="img/a71.png" alt=""></div>
+                                                散点图
+                                            </div>
+                                            <div class="list1">
+                                                    <div><img src="img/a72.png" alt=""></div>
+                                                K线图
+                                            </div>
+                                            <div class="list1">
+                                                    <div><img src="img/a73.png" alt=""></div>
+                                                三维图
+                                            </div>
+                                            <div class="list1">
+                                                    <div><img src="img/a75.png" alt=""></div>
+                                                倒影图
+                                            </div>
+                                            <div class="list1">
+                                                    <div><img src="img/a76.png" alt=""></div>
+                                                平面图
+                                            </div>
+                                        </div>
+                                    </li>
+                        </ul>
+                    </div>
+                    <button class="fabu1"><img src="img/cgsl/bc.png" /> 保存</button>
+                    <button class="fabu"><img src="img/cgsl/shaoxuan.png" /> 筛选</button>
+                </header>
+            <div class="pagesection">
+            <div class="page">
+                    <div class="list" data-index="1" >
+                        <span class="shanchu" title="删除"><img src="img/shanchu.png" alt=""></span>
+                        <div style="text-align: center" id="pc1">第二次全国污染源普查统计</div>
+                        <div id="e1" class="list-child">
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/china.js"></script>
+    <script src="../../plugin/layui/layui.all.js"></script>
+    <script src="js/esnew.js"></script>
+    <script src="js/slider.js"></script>
+    <script>
+    $(".sliderInput").eq(0).slider({
+        width:260,
+        isShowMark:true,
+        sliderDotSize:20,
+        barHeight:4,
+        step:20
+    });
+    </script>
+</body>
+</html>

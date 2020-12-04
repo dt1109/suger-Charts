@@ -1,0 +1,366 @@
+.indexnav{
+    width:100%;
+    position: relative; 
+}
+.indexnav img{
+    width:100%;
+    height: auto;
+}
+.indexnav .login{
+    position:absolute;
+    top:26px;
+    right: 184px;
+    font-size:0;
+}
+.indexnav .login a{
+    font-size:14px;
+    color:white;
+}
+.indexnav .login a.reg:after{
+    content: "|";
+    margin:0 10px 0;
+    font-size:16px;
+}
+/*顶部导航*/
+
+.pcyw .w1000 .title{
+    width:100%;
+    height: 200px;
+    background:#f5f5f5;
+}
+/*普查要闻*/
+
+.kjrk{
+    margin-top:20px;
+}
+.kjrk .w1000 .sys{
+    width:240px;
+    height: 138px;
+    float: left;
+    margin-right:13px;
+}
+.kjrk .w1000 .sys img{
+    width:100%;
+    height: auto;
+    transition: all .5s ease;
+}
+.kjrk .w1000 .sys:last-child{
+    margin-right:0;
+}
+.kjrk .w1000 .sys:hover a img{
+    transform: scale(1.1);
+    opacity:.8;
+}
+/*快捷入口*/
+
+.fbqk{
+    margin-top:20px;
+}
+.fbqk .w1000 .fbimg{
+    width:100%;
+    height: 482px;
+    background:url(../img/index/t1.png) no-repeat center;
+    background-size: cover;
+}
+/*分布情况*/
+
+.rkqk{
+    margin-top:20px;
+}
+.rkqk .w1000 .rkimg{
+    width:100%;
+    height: 408px;
+    background:url(../img/index/t2.png) no-repeat center;
+    background-size: cover;
+}
+/*入库情况*/
+.cgtzs{
+    margin-top:20px;
+}
+.cgtzs .w1000 .cgtimg{
+    width:100%;
+    height: 540px;
+    background:url(../img/index/t3.png) no-repeat center;
+    background-size: cover;
+}
+/*成果图展示*/
+
+footer{
+    width:100%;
+    margin-top:20px;
+}
+footer .img{
+    width:100%;
+    height:200px;
+    background:url(../img/index/bot.png) no-repeat center;
+    background-size: 100% 100%;
+}
+/*底部展示*/
+
+
+
+
+/* 弹出注册框*/
+#reg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9990;
+    display: none;
+}
+#reg .regbg{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:388px;
+    height:384px;
+    background:url(../img/index/register.png) no-repeat center;
+    z-index: 9999;
+}
+#reg .regbg .close{
+    display: block;
+    width: 16px;
+    height: 16px;   
+    position: absolute;
+    right:15px;
+    top:15px;
+    z-index: 9999;
+    background:url(../img/index/close.png) no-repeat center;
+    background-size: 100%;
+}
+
+
+/* 弹出登录框*/
+#log{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9990;
+    display: none;
+}
+#log .logbg{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:388px;
+    height:384px;
+    background:url(../img/index/login.png) no-repeat center;
+    z-index: 9999;
+}
+#log .logbg .close{
+    display: block;
+    width: 16px;
+    height: 16px;   
+    position: absolute;
+    right:15px;
+    top:15px;
+    z-index: 9999;
+    background:url(../img/index/close.png) no-repeat center;
+    background-size: 100%;
+}
+
+
+
+/*tab切换开始*/
+.pcyw .pcleft{
+    width:440px;
+    border-bottom: 1px solid #e5e5e5;
+    /*background: red;*/
+}
+.pcyw .pcleft .tabs{
+    width:435px;
+    height: 46px;
+    background:#f6f6f6;
+    font-size:0;
+}
+.pcyw .pcleft .tabs a{
+    display: inline-block;
+    width:145px;
+    height: 100%;
+    font-size: 16px;
+    line-height: 46px;
+    text-align:center;
+    color: #666;
+}
+.pcyw .pcleft .tabs a.active{
+    color:#fff;
+    background: #1586df;
+}
+.pcyw .pcleft .tabs a:hover{
+    color:#fff;
+    background: #1586df;
+}
+.pcyw .pcleft .swiper-container{
+    margin: 0 auto;
+}
+.pcyw .pcleft .indexlist ul li a{
+    display:block; 
+    width: 435px;
+    padding:0 10px;
+    box-sizing: border-box;
+    position:relative;
+}
+.pcyw .pcleft .indexlist ul li a:before{
+   position: absolute;
+   content: "";
+   z-index:999;
+   top: 4px;
+   left:10px;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   background:rgba(204,204,204,.6);
+}
+.pcyw .pcleft .indexlist ul li.ck a:before{
+   width: 0;
+}
+.pcyw .pcleft .indexlist ul li a h5,.pcyw .pcleft .indexlist ul li a h3{
+    font-size:14px;
+    color:rgba(77,77,77,1);
+    /*line-height:40px;*/
+    line-height: 14px;
+    padding-left:12px;
+    margin-bottom:22px;
+}
+.pcyw .pcleft .indexlist ul li.ck a{
+    width:434px;
+    height:128px;
+    background:rgba(255,255,255,1);   
+    border-radius:2px;
+    padding: 10px 12px;
+    margin:10px 0 20px 2px;
+    box-shadow:0px 0px 18px 0px rgba(221,221,221,0.4);
+    overflow:hidden;
+}
+.pcyw .pcleft .indexlist ul li:hover a h5{
+    color:rgba(21,134,223,1);
+}
+.pcyw .pcleft .indexlist ul li.ck:hover a{
+    border:1px solid rgba(21,134,223,.5); 
+    box-shadow:0px 0px 18px 0px rgba(221,221,221,0.4);
+}
+.pcyw .pcleft .indexlist ul li.ck a h1{
+    font-size:16px;
+    font-weight:bold;
+    color:rgba(21,134,223,1);
+    line-height:30px;
+}
+.pcyw .pcleft .indexlist ul li.ck a h2{
+    font-size:14px;
+    color:rgba(51,51,51,1);
+    line-height:24px;
+    opacity:0.6;
+}
+.pcyw .pcleft .indexlist ul li.ck a h3{
+    color:rgba(51,51,51,1);
+    line-height:18px;
+    opacity:0.6;
+}
+.pcyw .pcleft .indexlist ul li.ck a h4 img{
+    width:34px;
+    height:14px;
+    margin:6px 0 0 10px;
+}
+.list{
+    margin-top:20px;
+}
+.pcyw .pcright{
+    width: 537px;
+    height:426px;
+    /*background: #e5e5e5;*/
+    background: #ffffff;
+    overflow:hidden;
+}
+
+/*banner轮播*/
+.pclb{
+    width: 537px;
+    height:426px;
+    position:relative;
+    background:#f7f7f7;
+}
+.pclb .cf li{
+    position:relative;
+    float:left;
+    color:#fff;
+}
+.pclb .cf a{
+    display:block;
+    width:537px;
+    height:332px;
+    position:absolute;
+    color:#fff;
+}
+.pclb .cf li span{
+    display:block;
+    width:537px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-size: 14px;
+    padding:10px 20px;
+    text-align:left;
+    background:rgba(0,0,0,0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = "#60000000",endColorstr = "#60000000");
+ }   
+.pclb .picBox{
+    height:332px;
+    position:relative;
+    overflow:hidden;
+}
+.pclb .picBox ul{
+    height:332px;
+    position:absolute;
+}
+.pclb .picBox li{
+    width:537px;
+    height:332px;
+}
+.pclb .listBox{
+    width:537px;
+    height:81px;
+    margin:0 auto;
+    position:relative;
+    margin-top:12px;
+}
+.pclb .listBox ul{
+    width: 537px;
+    height:79px;
+    position:absolute;
+}
+.pclb .listBox li{
+    width:135px;
+    height:auto;
+    cursor:pointer;
+    position:relative;
+    /*margin-right:1px;*/
+}
+.pclb .listBox li #r0{
+    margin-right: 0;
+}
+.pclb .listBox li i{
+    position:absolute;
+    width:128px;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    z-index:999;
+}
+.pclb .listBox li img{
+    width:128px;
+    height:auto;
+    border:1px solid #ffffff;
+}
+.pclb .listBox .on img{
+    border:1px solid #ff6600;
+}
+.pclb .listBox .on i{
+    display:none;
+}

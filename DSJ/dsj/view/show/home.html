@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugin/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/rewriteLayui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/Home/Home.css"/>
+	</head>
+	<body>
+		<div class="home">
+			<!--上部-->
+			<div class="homeTop">
+				<!--首页任务-->
+				<div class="topLeft">
+					  <h3>首页</h3>
+					<div class="layui-tab">
+					  <ul class="layui-tab-title">
+					    <li class="layui-this">催办工作(0项)</li>
+					    <!--<span class="gd">|</span>-->
+					    <li>跟踪工作(0项)</li>
+					  </ul>
+					  <div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					      <ol class="myList">
+							<li>2019年生态司预算申请表  <span>2019-06-25</span></li>
+							<li>生态司关于送温暖报销单<span>2019-06-25</span></li>
+							<li>生态司公益活动报销单<span>2019-06-25</span></li>
+							<li>生态司公益活动费用报销单<span>2019-06-25</span></li>
+						</ol>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<ol class="myListsec">
+								<li>2019年生态司预算申请表 <span>2019-06-25</span></li>
+								<li>2019生态司关于送温暖报销单<span>2019-06-25</span></li>
+								<li>2019生态司公益活动报销单<span>2019-06-25</span></li>
+								<li>2019生态司公益活动费用报销单<span>2019-06-25</span></li>
+							</ol>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				<!--各部门花费-->
+				<div class="topRight">
+					  <h3>2019年经费占比情况</h3>
+					<div class="spendType">
+						<ul>
+							<li class="active">全部</li>
+							<!--<span class="gda"></span>-->
+							<li>直属</li>
+							<!--<span class="gda"></span>-->
+							<li>机关</li>
+						</ul>
+					</div>
+					<div id="spendChar">
+						
+					</div>
+				</div>
+			</div>
+			<!--下部-->
+			<div class="homeBott">
+				<h3>2019年各部门经费花费情况</h3>
+				<div class="spendTypea">
+						<ul>
+							<li class="active">全部</li>
+							<li>直属工会</li>
+							<li>机关工会</li>
+						</ul>
+				</div>
+				<div id="lineChar"></div>
+			</div>
+		</div>
+	</body>
+	<script src="../../plugin/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugin/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/Home/Home.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		layui.use('element', function() {
+			var $ = layui.jquery,
+			element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+	
+		})
+		
+		//点击切换颜色
+		$(".spendType ul >li").on('click',function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+		
+		$(".spendTypea ul >li").on('click',function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		})
+	</script>
+</html>

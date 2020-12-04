@@ -1,0 +1,250 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #ececec;
+	font-size: 14px;
+	overflow: hidden;
+	font-family:Microsoft YaHei;
+}
+/*头部*/
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #FFF;
+}
+::-webkit-scrollbar-thumb {
+    background: #E3E3E3;
+    border-radius: 5PX;
+}
+#header{
+	background: #f74e18;
+	height: 60px;
+}
+#header .myLogo{
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+#header .adminBox{
+	float: right;
+}
+#header .adminBox li{
+	height: 60px;
+	line-height: 60px;
+	float: left;
+	padding: 0 10px;
+	color: #FFFFFF;
+}
+#header .adminBox li img{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+#header .adminBox li.loginOut{
+	cursor: pointer;
+}
+/*主体部分*/
+#main{
+	height: 100%;
+}
+/*左侧*/
+#mainLeft{
+	width: 175px;
+	float: left;
+	height: 100%;
+	background: url(../../img/bbgg.png);
+	background-size: 100% 100%;
+}
+.top{
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid rgba(244,245,255,0.2);
+	padding-bottom: 10px;
+}
+.top img{
+	width: 38px;
+	height: 40px;
+	margin: 14px 0;
+
+}
+.top p{
+    width: 145px;
+    margin-left: 15px;
+    height: 33px;
+    font-size: 12px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: rgba(255,255,255,1);
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*左侧菜单*/
+.layui-nav-tree {
+    width: 175px;
+    padding: 0;
+    top: 158px;
+    padding: 10px;
+}
+/* 登录名 */
+.loginShow{
+	width: 100%;
+	text-align: center;
+	height: 45px;
+	border-bottom: 1px solid rgba(244,245,255,0.2);
+	line-height: 45px;
+}
+.loginShow img{
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+.animaimg {
+	/* margin-right: 10px; */
+}
+.layui-nav {
+   	background: rgba(0,0,0,0);;	
+}
+.layui-nav .layui-nav-item .sjcx{
+	background: url(../../img/cx1.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+.layui-nav .layui-this .sjcx{
+	background: url(../../img/cx2.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+.layui-nav .layui-nav-item .sjsl{
+	background: url(../../img/sl1.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+.layui-nav .layui-this .sjsl{
+	background: url(../../img/sl2.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+.layui-nav-tree .layui-nav-item >a>p{
+	height: 100%;
+	padding-left: 5px;
+    font-weight: normal;
+	font-stretch: normal;
+    color: #fff;
+    text-align: center;
+}
+#slideNav .layui-this>a>p{
+	color:rgba(21,134,223,1);
+}
+.layui-nav-tree .layui-nav-item >a{
+	background: transparent;
+}
+.layui-nav-tree .layui-nav-bar{
+	display: none;
+}
+.layui-nav-itemed>.layui-nav-child {
+    display: block;
+    padding: 0;
+    background-color: transparent!important;
+}
+.layui-nav-tree .layui-nav-item a {
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #535353;
+    padding: 0;
+}
+.layui-nav-tree .layui-nav-item{
+	border-radius:4px;
+    margin-top: 10px;
+}
+.layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, 
+.layui-nav-tree .layui-nav-title a:hover {
+    color: #333!important;
+}
+.layui-nav .layui-nav-item a:hover, 
+.layui-nav .layui-this a {
+    color: #0975b3;
+}
+.layui-nav-tree .layui-nav-child, 
+.layui-nav-tree .layui-nav-child a:hover {
+    background: 0 0;
+    color: #0975b3;
+}
+.layui-nav-tree .layui-nav-child dd.layui-this, 
+.layui-nav-tree .layui-nav-child dd.layui-this a, 
+.layui-nav-tree .layui-this, .layui-nav-tree .layui-this>a, 
+.layui-nav-tree .layui-this>a:hover {
+    background-color: rgba(245,245,245,1);
+    color: #f74e18;
+}
+.layui-nav-tree .layui-nav-item a:hover  {
+   color: #f74e18;
+   background-color: transparent;
+}
+.layui-nav .layui-nav-item .layui-nav-child dd a{
+	padding-left: 60px;
+	box-sizing: border-box;
+}
+/*改变三角颜色*/
+.layui-nav .layui-nav-mored, 
+.layui-nav-itemed>a .layui-nav-more {
+	display: none;
+    border-color: transparent transparent #000;
+}
+.layui-nav .layui-nav-more{
+	display: none;
+	border-top-color: #000000;
+}
+.layui-nav-child.thirdMenu{
+	padding-left: 15px;
+}
+
+/*右侧*/
+#mainRight{
+	margin-left: 175px;
+	height: 100%;
+	background: #fff;
+}
+.layui-tab {
+    margin: 0; 
+    text-align: left!important;
+}
+.layui-tab-content {
+    padding: 0px;
+    height: 99%;
+    background: #FFFFFF;
+}
+.layui-tab-title{
+	margin-left: 0;
+	margin-right: auto;
+	width: 100%;
+}
+.layui-show{
+	width: 100%;
+	height: 100%;
+}
+/*滚动条*/
+::-webkit-scrollbar-track {
+    background-color: #f9f2e2
+}
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+    background-color: #f9f2e2
+}
+::-webkit-scrollbar-thumb {
+    background-color: #e4e4e4
+}
+/*横向滚动条样式 */
+::-webkit-scrollbar:horizontal{  
+   height: 7px;  
+}  

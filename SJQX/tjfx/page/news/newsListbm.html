@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文章列表--layui后台管理模板 2.0</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/public.css" media="all" />
+	<style>
+		.layui-input{
+			display: inline !important;
+			width: auto !important;
+			margin-right: 3px;
+		}
+		.time-left{
+			position: relative;
+			left: -28px;
+		}
+		.SPAN-S{
+    	position: relative;
+    	left: -19px;
+		}
+	</style>
+</head>
+<body class="childrenBody">
+<form class="layui-form">
+	<blockquote class="layui-elem-quote quoteBox">
+		<form class="layui-form">
+			<div class="layui-inline">
+				<div class="layui-input-inline">
+					报表名称:<input type="text" class="layui-input searchVal" placeholder="请输入报表名称" />
+					业务名称:<input type="text" class="layui-input searchVal" placeholder="请输入业务名称" />
+					表名称:<input type="text" class="layui-input searchVal" placeholder="请输入表名称" />
+					开始时间:<input type="text" id="test1" class="layui-input"/><img src="../tjfx/time.png" alt="" class="time-left layui-date"/>
+				</div>
+				<!-- <a class="layui-btn search_btn" data-type="reload">查询</a> -->
+			</div>
+		</form>
+		<div class="layui-input-inli">
+			结束时间:<input type="text" id="test2" class="layui-input"/><img src="../tjfx/time.png" alt="" class="time-left layui-date1"/>
+			<span class="SPAN-S">字段名称:<input type="text" class="layui-input searchVal" placeholder="请输入字段名称"></span>
+			<span class="SPAN-S">字段关键字:<input type="text" class="layui-input searchVal" placeholder="请输入字段关键字"></span>
+			<img src="../tjfx/icx.png" alt="" class="ix-chaxun">
+		</div>
+	</blockquote>
+	<table id="newsList" lay-filter="newsList"></table>
+	<!--审核状态-->
+	<script type="text/html" id="newsStatus">
+		{{#  if(d.newsStatus == "1"){ }}
+		<span class="layui-red">禁用</span>
+		{{#  } else if(d.newsStatus == "0"){ }}
+		<span class="layui-blue">正常</span>
+		{{#  } else { }}
+			审核通过
+		{{#  }}}
+	</script>
+
+	<!--操作-->
+	<script type="text/html" id="newsListBar">
+		<a class="layui-btn layui-btn-xs" lay-event="edit" style="background:#48aff4;">编辑</a>
+		<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+		<a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="look">预览</a>
+	</script>
+</form>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="newsListbm.js"></script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1', //指定元素
+	eventElem: '.layui-date',
+    trigger: 'click'
+  });
+  laydate.render({
+    elem: '#test2', //指定元素
+	eventElem: '.layui-date1',
+    trigger: 'click'
+  });
+});
+</script>
+</body>
+</html>

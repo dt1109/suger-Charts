@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+	<title>数据查询分析工具</title>
+	</head>
+	<link rel="stylesheet" href='plugin/layui/css/layui.css' media="all">
+	<link rel="stylesheet" type="text/css" href="css/common/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index/index.css"/>
+	<body>
+		<div id="main">
+			<div id="mainLeft">
+				<!-- 顶部 -->
+				<div class="top">
+					<img src="img/menu/logo.png" >
+					<p>第二次全国污染源普查成果数据化查询与分析工具</p>
+				</div>
+				<!-- 登录名 -->
+				<div class="loginShow">
+					<!-- 登录动画 -->
+						<img src="img/menu/Video.png" class="animaimg" title="视频播放" alt="视频播放">
+						<img src="img/menu/My.png" class="loginNameimg" title="用户头像">
+
+				</div>
+				<!--菜单选框-->
+	            <ul id="slideNav" class="layui-nav layui-nav-tree layui-nav-side">
+	            	<li class="layui-nav-item layui-this">
+	            		<a href="javascript:;" data-url="view/DQL/select.html" class="site-demo-active sjcx"><p>数据查询</p></a>
+	            	</li>
+	            	<li class="layui-nav-item">
+	            		<a href="javascript:;" data-url="view/show/cgsl.html" class="site-demo-active sjsl"><p>成果图示例</p></a>
+	            	</li>
+	            	
+	            </ul>
+			</div>
+            <div id="mainRight" class="layui-tab" lay-filter="demo" lay-allowclose="true">
+                <iframe id="myIframe" src="view/DQL/select.html" width="100%" height="99%" frameborder="0"></iframe>
+            </div>
+
+        </div>
+
+	</body>
+	<script src="plugin/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src='plugin/layui/layui.js' ></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	 <!--<script>
+	 	//响应子级页面的弹框在父级打开
+	     	layui.use('layer', function(){
+				var layer = layui.layer; 
+			});
+	     </script>-->
+</html>

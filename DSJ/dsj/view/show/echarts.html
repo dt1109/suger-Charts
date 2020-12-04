@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/1.css">
+</head>
+<body>
+    <header class="e-header">
+        <span style="margin-left: 20px;">
+            <img src="img/favicon-new.ico" alt="">YtuUI
+        </span>
+        <div class="e-tab">
+            <ul>
+                <li class="tubiao">
+                    <div class='tubiao1'><img src="img/top1.png" alt=""></div>
+                    图表
+                    <div class="page1">
+                        <div class="list1" id="zhexiantu">
+                            <div><img src="img/a50.png" alt=""></div>
+                            <p>折线图<p>
+                        </div>
+                        <div class="list1" id="zhuzhuangtu">
+                            <div><img src="img/a63.png" alt=""></div>
+                            <p>柱状图</p>
+                        </div>
+                        <div class="list1" id="bingzhaungtu">
+                            <div><img src="img/a64.png" alt=""></div>
+                            饼状图
+                        </div>
+                        <div class="list1" id="quxiantu">
+                                <div><img src="img/a50.png" alt=""></div>
+                            曲线图
+                        </div>
+                        <div class="list1" id="zhongguomap">
+                            <div><img src="img/a65.png" alt=""></div>
+                           中国地图
+                        </div>
+                        <div class="list1" id="zhongguomap">
+                                <div><img src="img/a69.png" alt=""></div>
+                               环饼图
+                            </div>
+                            <div class="list1" id="zhongguomap">
+                                    <div><img src="img/a70.png" alt=""></div>
+                                   内圆饼图
+                                </div>
+                    </div>
+                </li>
+                <li class="qita">
+                    <div class='tubiao1'><img src="img/top2.png" alt=""></div>
+                    其他图表
+                    <div class="page2">
+                        <div class="list1">
+                                <div><img src="img/a71.png" alt=""></div>
+                            散点图
+                        </div>
+                        <div class="list1">
+                                <div><img src="img/a72.png" alt=""></div>
+                            K线图
+                        </div>
+                        <div class="list1">
+                                <div><img src="img/a73.png" alt=""></div>
+                            三维图
+                        </div>
+                        <div class="list1">
+                                <div><img src="img/a75.png" alt=""></div>
+                            倒影图
+                        </div>
+                        <div class="list1">
+                                <div><img src="img/a76.png" alt=""></div>
+                            平面图
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="fabu1">切换数据接口</button>
+        <button class="fabu">发布</button>
+    </header>
+    <div class="section">
+        <div class="gongju">
+            <div class="gongju-title">
+                    <div id="my-tabs">
+                            <ul class="tabs">
+                              <li class="active"><a data-toggle="tab" href="#content1">基础</a></li>
+                              <li><a data-toggle="tab" href="#content2">数据</a></li>
+                              <li><a data-toggle="tab" href="#content3">高级</a></li>
+                            </ul>
+                            <div class="container">
+                              <div id="content1" class="active">
+                               <p><span>图表名称: </span><input type="text" value="第二次全国污染源普查统计" id="mc"></p>
+                               <p><span>图表简介: </span><input type="text" value="暂无简介"></p>
+                               <p><span>图表宽度: </span><input type="text" value="33%"></p>
+                               <p><span>图表高度: </span><input type="text" value="33%"></p>
+                              </div>
+                              <div id="content2">
+                                    <p><span>选择API: </span><input type="text"></p>
+                                    <p><span>选择json: </span><input type="text"></p>
+                              </div>
+                              <div id="content3">
+                                    <p><span>线条平滑<img src="img/guan.png" alt=""></span></p>
+                                    <p><span>面积图<img src="img/guan.png" alt=""></span></p>
+                                    <p><span>更改X轴<img src="img/guan.png" alt=""></span></p>
+                                    <p><span>更改Y轴<img src="img/guan.png" alt=""></span></p>
+                                    <p><span>网格线<img src="img/guan.png" alt=""></span></p>
+                                    <p><span>缩放<img src="img/guan.png" alt=""></span></p>
+                            </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="list" data-index="1" >
+                <span class="shanchu" title="删除"><img src="img/shanchu.png" alt=""></span>
+                <div style="text-align: center" id="pc1">第二次全国污染源普查统计</div>
+                <div id="e1" class="list-child">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/china.js"></script>
+    <!-- <script src="js/1.js"></script> -->
+    <script src="js/esnew.js"></script>
+    <script type="text/javascript">
+        var put1=document.getElementById("mc");
+         var div1=document.getElementById("pc1");
+         put1.onkeyup=function(){
+         div1.innerText=put1.value;
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>数据查询</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common/rewriteLayui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/DQL/select.css" />
+		<!--基本情况的连接-->
+		<link rel="stylesheet" href="../../plugin/jquery-easyui-1.5/themes/bootstrap/easyui.css">
+	    <link rel="stylesheet" href="../../plugin/paging/paging.css" />
+	
+	    <!--公共样式-->
+	    <link rel="stylesheet" href="../../common/css/common.css">
+	    <link rel="stylesheet" href="../../common/css/top/default.css">
+	    <link rel="stylesheet" href="../../common/css/highSearch.css">
+	    <link rel="stylesheet" href="../../common/css/top/head.css">
+	    <!--<link href="css/gis/map.css" rel="stylesheet" />-->
+	    <!--主页样式-->
+	    <link rel="stylesheet" href="../../css/document/main.css">
+	    <!--当前样式-->
+	    <link rel="stylesheet" href="../../css/document/index.css">
+	    <!--适配样式-->
+	    <link
+	            media="screen and (min-device-width:1336px) and (max-device-width:1440px)"
+	            rel="stylesheet" href="../../common/css/top/1366.css" />
+	    <link media="screen and (min-device-width:1900px)" rel="stylesheet"
+	          href="../../common/css/top/1980.css" />
+	    <link rel="stylesheet" href="../../css/document/document.css">
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="mainLef">
+				<div class="layui-tab layui-tab-brief">
+					<ul class="layui-tab-title">
+						<li class="layui-this">我的条件</li>
+						<li>报表制度</li>
+						
+					</ul>
+					<div class="layui-tab-content">
+						<!--tab页面1-->
+						<div class="layui-tab-item layui-show">
+							<div class="title">
+								<h2>机关工会经预算分配2222222</h2>
+							</div>
+
+						</div>
+						<!--tab页面2-->
+						<div class="layui-tab-item">
+							<div id="test1" class="demo-tree demo-tree-box"></div>
+							<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+							  <legend>第二次全国污染源普查</legend>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="mainRigh" class="layui-tab" lay-filter="demo" lay-allowclose="true">
+					<!--中间的条件搜索部分-->
+				<div class="condition">
+				    <!--搜索框-->
+				    <div class="search_box">
+				        <div action="" method=" " id="simple_search">
+				            <div class="searchdiv">
+				                <!--下拉菜单显示信息位置-->
+				                <div class="search">
+				                    <span class="search_type"></span> <span class="search_img" onclick="select_panel()"><img src="../../img/sel.png" /></span>
+				                </div>
+				                <!--下拉面板-->
+				                <ul class="select">
+				                    <li value="EpName">排口名称</li>
+				                    <li value="LICENSECODE">设置单位</li>
+				                    <li value="LEGALPERSON">联系人</li>
+				                    <li value="ADDRESS">地址</li>
+				                </ul>
+				            </div>
+				            <input type="text" id="intext" value=""  onkeypress="searchKuangName(event)"/>
+				            <input type="button" value="×" class="reset_onecondision" />
+				            <input type="button" class="btn" onclick="search()" value="搜索" />
+				
+				        </div>
+				    </div>
+				    <div class="more_search">
+				        <div class="advanced_search">
+				            <div class="search_fold">
+									<span class="result_count">共<span class="count"></span>条结果
+									</span>
+				                                 <div class="view_way">
+				                                     <span class='view_method1 simple_view' onclick='tiaozhuan(0)'></span>
+				                                     <span class='map-view' onclick='' ></span>
+				                                 </div>
+				                <div class="hsearch" onclick="set_advanced_search()">
+				                    <span class="searchImg"></span>
+				                    <span class="hsearch_span">高级搜索</span>
+				
+				                </div>
+				                <img src="../../img/menu/dc.png" class="export_btn"  onclick="window.open('files/重庆入河海排污口基本信息.xlsx')">
+				            </div>
+				            <!--高级搜索条件生成地方-->
+				            <div class="hsearch_result">
+				                <div>
+				                    <input type="submit" name="submit" value="查询" onclick="clickHighSearch();" />
+				                    <input type="button" name="reset" value="清空" class="reset_muchcondision" /> <label>搜索条件：</label>
+				                    <div class="muchcondision"></div>
+				                </div>
+				            </div>
+				        </div>
+				        <!--高级搜索部分div .advanced_search_con-->
+				        <div class="advanced_search_con"></div>
+				    </div>
+				</div>
+				<div class="main">
+				    
+				    <div class="little_tag">展开更多</div>
+				    <!--中间显示企业部分-->
+				    <div class="maincenter">
+				        <ul class="maincon"></ul>
+				        <div class="paginat" id="paginta">
+				            <div id="page"></div>
+				        </div>
+				    </div>
+				</div>
+				<div class="more_codition">
+				    <div class="show_codition">
+				        <!-- <ol>
+				</ol> -->
+				    </div>
+				    <div class="more_bottom"></div>
+				</div>
+				
+				<div id="warn_info" class="warn_info">
+				    <ol class="company_warn">
+				
+				    </ol>
+				</div>
+				<div class='setWaring' id="setWaring">
+				    <div class="waringCon">
+				        <label>类型：</label>
+				        <select id="waringType" onchange="waringType()">
+				            <option value="00">请选择数据类型</option>
+				            <option value="01">废气</option>
+				            <option value="02">废水</option>
+				            <option value="03">进水</option>
+				        </select>
+				        <label>污染物：</label>
+				        <select id="waste" onchange="waringVal()" >
+				        </select>
+				    </div>
+				    <div class="waringCon">
+				        <label>污染物浓度：</label>
+				        <input type="text" name="type" class="waringInput" id="maxVal">
+				        <input type="hidden" name="warId" class="waringInput" id="warId">
+				    </div>
+				    <div class="waringCon">
+				        <input type="button" value="修改" class="updateWaring" onclick="updateWaring()">
+				    </div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script src="../../plugin/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../plugin/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/DQL/select.js" type="text/javascript" charset="utf-8"></script>
+	<!--详情展示部分-->
+	<script src="../../plugin/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+	<script src="../../plugin/layui/lay/modules/layer.js"></script>
+	<script src="../../plugin/paging/query.js"></script>
+	<script src="../../plugin/paging/paging.js"></script>
+	<script src="../../config/mapconfig.js"></script>
+	<script src="../../common/js/highSearch.js"></script>
+	<script src="../../plugin/archives.js"></script>
+
+</html>

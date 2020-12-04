@@ -1,0 +1,34 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	color: #333333;
+	overflow: hidden;
+}
+/*主体部分*/
+#main{
+	height: 100%;
+}
+/*layui样式整改*/
+.layui-tab {
+   margin: 0;
+}
+/*左侧*/
+#mainLef{
+	width: 360px;
+	float: left;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid red;
+    overflow-y: scroll;
+}
+#test1{
+	overflow-y: scroll;
+}
+/*右侧*/
+#mainRigh{
+	margin-left: 360px;
+	height: 100%;
+	background: #fff;
+	box-sizing: border-box;
+	border: 1px solid red;
+}

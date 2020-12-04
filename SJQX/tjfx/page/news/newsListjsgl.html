@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文章列表--layui后台管理模板 2.0</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/public.css" media="all" />
+	<style>
+		.layui-input{
+			display: inline !important;
+			width: auto !important;
+		}
+		.layui-input-inline {
+    	vertical-align: middle;
+    	display: flex !important;
+		line-height: 38px;
+		}
+		.layui-unselect.layui-form-select {
+    		margin-right: 30px;
+		}
+		.xzsjy1{
+			position: relative;
+    		left: -55px;
+    	    height: 17px;
+    	    top: 10px;
+		}
+		.img-le{
+			margin-left: 10px;
+			height: 30px;
+			position: relative;
+			top: 3px;
+		}
+	</style>
+</head>
+<body class="childrenBody">
+<form class="layui-form">
+	<blockquote class="layui-elem-quote quoteBox">
+		<form class="layui-form">
+			<div class="layui-inline">
+				<div class="layui-input-inline">
+					选择已质检数据源:
+					<select name="" id="">
+						<option value="">G101-1;</option>
+						<option value="">G101-2;</option>
+					</select>
+					<img src="../tjfx/xzsjy.png" alt="" class="xzsjy1">
+					<img src="../tjfx/ksdr.png" class="img-le" alt="">
+					<img src="../tjfx/yldr.png" class="img-le" alt="">
+					<img src="../tjfx/xzdr.png" class="img-le" alt="">
+				</div>
+			</div>
+			</div>
+		</form>
+	</blockquote>
+	<table id="newsList" lay-filter="newsList"></table>
+	<!--审核状态-->
+	<script type="text/html" id="newsStatus">
+		{{#  if(d.newsStatus == "1"){ }}
+		<span class="layui-red">禁用</span>
+		{{#  } else if(d.newsStatus == "0"){ }}
+		<span class="layui-blue">正常</span>
+		{{#  } else { }}
+			审核通过
+		{{#  }}}
+	</script>
+
+	<!--操作-->
+	<script type="text/html" id="newsListBar">
+		<a class="layui-btn layui-btn-xs" lay-event="edit" style="background:#48aff4;">编辑</a>
+		<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+		<a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="look">预览</a>
+	</script>
+</form>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="newsListjsgl.js"></script>
+</body>
+</html>
